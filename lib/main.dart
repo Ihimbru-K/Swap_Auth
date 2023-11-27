@@ -1,6 +1,7 @@
 import 'package:expat_swaps/controller/login.dart';
 import 'package:expat_swaps/controller/user_controller.dart';
 import 'package:expat_swaps/firebase_options.dart';
+import 'package:expat_swaps/form.dart';
 import 'package:expat_swaps/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  UserController.user != null? HomePage() : Login(),
+    //  home:  UserController.user != null? HomePage() : Login(),
+      home : MyForm(),
     );
   }
 }
