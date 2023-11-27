@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (context) => MyForm()),
                     );
                   },
-                  child: Text("Fill in form"),
+                  child: Text("Fill form"),
                   style: ButtonStyle(
                     minimumSize: MaterialStateProperty.all(
                         Size(150, 50)), // Increase the size values as needed
