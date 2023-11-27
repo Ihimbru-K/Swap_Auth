@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'form_data_display.dart';
+
 class MyForm extends StatefulWidget {
   @override
   _MyFormState createState() => _MyFormState();
@@ -26,6 +28,10 @@ class _MyFormState extends State<MyForm> {
         'address': addressController.text,
       }).then((value) {
         print('Form data stored successfully!');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => UserDataScreen(userEmail: emailController.text,)),
+        );
         // Perform any additional actions upon successful storage
       }).catchError((error) {
         print('Failed to store form data: $error');
@@ -111,6 +117,10 @@ class _MyFormState extends State<MyForm> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     storeFormData();
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => UserDataScreen()),
+                   // );
                   }
                 },
                 child: Text('Submit'),
