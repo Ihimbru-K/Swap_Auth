@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'controller/user_controller.dart';
+import '../controller/user_controller.dart';
 
 class UserDataScreen extends StatelessWidget {
   final String userEmail; // User's email as the unique identifier
@@ -13,7 +13,7 @@ class UserDataScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Data', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
+        title: const Text('User Data', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       body: StreamBuilder<QuerySnapshot>(
@@ -23,13 +23,13 @@ class UserDataScreen extends StatelessWidget {
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
           }
 
           if (snapshot.hasError) {
-            return Center(
+            return const Center(
               child: Text('Error fetching user data'),
             );
           }
@@ -42,35 +42,35 @@ class UserDataScreen extends StatelessWidget {
 
                 return Card(
                   elevation: 2,
-                  margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: ListTile(
-                    contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                    contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
                     title: Text(
                       'Name: ${userData['name']}',
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Text(
                           'Email: ${userData['email']}',
-                          style: TextStyle(fontSize: 14),
+                          style: const TextStyle(fontSize: 14),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         Text(
                           'Phone: ${userData['phone']}',
-                          style: TextStyle(fontSize: 14),
+                          style: const TextStyle(fontSize: 14),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         Text(
                           'Date of Birth: ${userData['dob']}',
-                          style: TextStyle(fontSize: 14),
+                          style: const TextStyle(fontSize: 14),
                         ),
-                        SizedBox(height: 4),
+                        const SizedBox(height: 4),
                         Text(
                           'Address: ${userData['address']}',
-                          style: TextStyle(fontSize: 14),
+                          style: const TextStyle(fontSize: 14),
                         ),
                       ],
                     ),
@@ -81,7 +81,7 @@ class UserDataScreen extends StatelessWidget {
 
           }
 
-          return Center(
+          return const Center(
             child: Text('No user data found'),
           );
         },

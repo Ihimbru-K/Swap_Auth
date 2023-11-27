@@ -1,8 +1,8 @@
-import 'package:expat_swaps/controller/login.dart';
+import 'package:expat_swaps/screens/login.dart';
 import 'package:expat_swaps/controller/user_controller.dart';
 import 'package:expat_swaps/firebase_options.dart';
-import 'package:expat_swaps/form.dart';
-import 'package:expat_swaps/home.dart';
+import 'package:expat_swaps/screens/form.dart';
+import 'package:expat_swaps/screens/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
