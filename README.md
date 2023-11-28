@@ -4,7 +4,7 @@ Expat Swaps is a Flutter mobile app that allows users to input and submit person
 
 ## Features
 
-- Google authentication for user login and signup.
+- Google authentication for user login.
 - Input and submission of personal information through a form.
 - Form validation to ensure data accuracy.
 - Data storage in a Firebase Firestore database.
@@ -27,33 +27,27 @@ To run the app locally, follow these steps:
 
    ```bash
    git clone https://github.com/Ihimbru-K/Swap_Auth.git
-2. Run `flutter pub get` in the project directory to fetch the dependencies.
 
 3. Navigate to the project directory:
 
   `cd Swap_Auth`
+3. Fetch dependencies: run `flutter pub get` in the project directory.
+4. Set up Firebase Authentication and Firestore by following the instructions in the documentation.
+5. Launch the app on a connected device or emulator: `flutter run`
 
-4. Set up your Firebase project and configure the necessary files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS) as described in the authentication and Firestore setup section. Configuration:
-   - Set up Firebase Authentication and enable Google Sign-In as an authentication method.
-   - Set up Firebase Firestore and create a collection to store the submitted form data.
-   - Update the necessary configuration files in the Flutter project to connect to Firebase. Refer to the authentication and database setup documentation for more details.
+Note: To properly configure the app, ensure you have the necessary configuration files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS) in the respective project directories.
 
-5. Run the app locally using `flutter run`.
-
-## Dependencies
+## Dependencies being added
 
 - Flutter: [Flutter SDK](https://flutter.dev)
-- Firebase Core: ^1.10.0
-- Firebase Auth: ^3.3.6
-- Cloud Firestore: ^3.1.7
+- Firebase Core: ^2.23.0
+- Firebase Auth: ^4.10.1
+- Google Sign In : ^6.1.5
+- Cloud Firestore: ^4.3.2
+- Google Fonts: ^6.1.0
+- Iconly: ^1.0.1
+- Intl: ^0.17.0
 
 ## Contributions
 
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-### Installation
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Ihimbru-K/Swap_Auth.git
