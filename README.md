@@ -30,9 +30,8 @@ To run the app locally, follow these steps:
 2. Run `flutter pub get` in the project directory to fetch the dependencies.
 
 3. Navigate to the project directory:
-  ```bash
-  cd Swap_Auth
 
+  `cd Swap_Auth`
 
 4. Set up your Firebase project and configure the necessary files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS) as described in the authentication and Firestore setup section. Configuration:
    - Set up Firebase Authentication and enable Google Sign-In as an authentication method.
