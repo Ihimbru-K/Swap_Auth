@@ -1,6 +1,6 @@
 # Expat Swaps
 
-Expat Swaps is a Flutter mobile app that allows users to input and submit personal information through a form, ensuring form validation. The app supports Google authentication for user login and signup. The submitted data is stored in a Firebase Firestore database and can be viewed by the user.
+Expat Swaps is a cross platform authentication app built with flutter that can run on android, iOS, web and Linux. It allows users to input and submit personal information through a form, ensuring form validation. The app supports Google authentication for user login and signup. The submitted data is stored in a Firebase Firestore database and can be viewed by the user.
 
 ## Features
 
@@ -28,12 +28,15 @@ To run the app locally, follow these steps:
    ```bash
    git clone https://github.com/Ihimbru-K/Swap_Auth.git
 
-3. Navigate to the project directory:
+2. Navigate to the project directory:
 
   `cd Swap_Auth`
+  
 3. Fetch dependencies: run `flutter pub get` in the project directory.
-4. Set up Firebase Authentication and Firestore by following the instructions in the documentation.
-5. Launch the app on a connected device or emulator: `flutter run`
+   
+5. Set up Firebase Authentication and Firestore by following the instructions in the documentation.
+   
+7. Launch the app on a connected device or emulator: `flutter run`
 
 Note: To properly configure the app, ensure you have the necessary configuration files (`google-services.json` for Android and `GoogleService-Info.plist` for iOS) in the respective project directories.
 
